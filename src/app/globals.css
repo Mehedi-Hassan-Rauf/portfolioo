@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: #000103; */
+  background-color: transparent;
+  /* background-color: #0a0908; */
+  /* background-color: #1c1b17; */
+  color: #fff;
+  /* cursor: none; */
+}
+
+.mask {
+  mask-image: url("../../public/mask.svg");
+  width: 100%;
+  height: 100%;
+  mask-repeat: no-repeat;
+  mask-size: 100px;
+  background: white;
+  position: absolute;
+}
+
+.mask2 {
+  mask-image: url("../../public/mask2.svg");
+  width: 100%;
+  height: 100%;
+  mask-repeat: no-repeat;
+  mask-size: 10px;
+  background: white;
+  position: absolute;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #f7f7f7;
+}
+
+.cursor-outline {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #f7f7f7;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  /* padding: 10px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-text {
+  font-size: 5px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: none;
+}
