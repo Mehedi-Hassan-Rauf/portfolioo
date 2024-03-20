@@ -43,7 +43,14 @@ const ShortAbout = () => {
         <div className="flex gap-4 items-center">
           <h2 className=" text-neutral-300">Check out my CV </h2>
           <button className="inline-flex px-5 py-2 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  outline-none">
-            <Link href={""}>Resume</Link>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1wkOE8Owq0ezO_jzyVqZ01S2eiuRhf7rG/view?usp=sharing"
+              }
+              target="_blank"
+            >
+              Resume
+            </Link>
           </button>
         </div>
       </div>
