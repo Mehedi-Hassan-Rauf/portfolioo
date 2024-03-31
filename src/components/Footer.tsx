@@ -17,7 +17,7 @@ const Footer = () => {
             "https://drive.google.com/file/d/1wkOE8Owq0ezO_jzyVqZ01S2eiuRhf7rG/view?usp=sharing") ||
           (pathName == "/contact" && "/")
         }`}
-        target={`${pathName == "/projects" && "_blank"}`}
+        target={`${pathName == "/projects" ? "_blank" : "_self"}`}
         className="flex flex-row gap-5 items-center"
       >
         <h1>

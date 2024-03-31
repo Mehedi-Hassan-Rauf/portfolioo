@@ -16,7 +16,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about relative w-11/12 sm:w-9/12 min-h-screen pt-36 sm:pt-48 text-white flex flex-col gap-20 ">
+    <div className="about relative w-11/12 overflow-x-hidden sm:w-9/12 min-h-screen pt-36 sm:pt-48 text-white flex flex-col gap-20 ">
       {/* <Image src={mask} alt="mask" /> */}
       {/* stop */}
 

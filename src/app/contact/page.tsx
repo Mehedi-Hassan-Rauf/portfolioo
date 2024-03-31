@@ -48,18 +48,18 @@ const Contact = () => {
     });
   }, []);
   return (
-    <div className="contact relative w-11/12 sm:w-9/12 pt-36 sm:pt-48 text-white flex flex-col gap-10">
+    <div className="contact relative overflow-x-hidden w-11/12 sm:w-9/12 pt-36 sm:pt-48 text-white flex flex-col gap-10">
       <Toaster position="top-right" />
-      <h1
-        data-aos="fade-up"
-        className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
-      >
-        Contact.
-      </h1>
-      <div className="inputs w-full md:w-2/3 flex flex-col gap-10">
-        <p data-aos="fade-left" className="">
+      <div data-aos="fade-up">
+        <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          Contact.
+        </h1>
+      </div>
+      <div className="w-full md:w-2/3 flex flex-col gap-10">
+        <p data-aos="fade-left">
           Get in touch or shoot me an email directly on raufnx@gmail.com
         </p>
+
         <form onSubmit={handleSubmit} className="flex flex-col gap-10">
           <input
             type="text"

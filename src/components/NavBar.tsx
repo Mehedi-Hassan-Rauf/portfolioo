@@ -30,21 +30,21 @@ function NavBar() {
       <div
         className={`${
           navbar && "h-screen"
-        } md:h-fit flex gap-0 w-full flex-col md:flex-row items-center md:justify-between px-4 lg:max-w-7xl md:px-8`}
+        } md:h-fit flex gap-0 w-full bg-black flex-col md:flex-row items-center md:justify-between px-4 lg:max-w-7xl md:px-8`}
       >
-        <div className="flex items-center w-full justify-between py-3 md:py-8 md:block">
+        <div className="flex items-center w-full justify-between py-3 md:py-6 md:block">
           {/* LOGO */}
-          <div className="flex items-center relative w-fit">
-            <Link href="/">
+          <Link href="/">
+            <div className="flex items-center relative w-fit">
               <ImPacman
                 data-aos="fade-left"
                 className="text-3xl text-white font-bold flex"
               />
-            </Link>
-            <span data-aos="fade-right" className="text-sm ml-[-8px]">
-              10110
-            </span>
-          </div>
+              <span data-aos="fade-right" className="text-sm ml-[-8px]">
+                10110
+              </span>
+            </div>
+          </Link>
           {/* HAMBURGER BUTTON FOR MOBILE */}
           <div className="md:hidden">
             <button
@@ -57,7 +57,7 @@ function NavBar() {
         </div>
 
         <div
-          className={`flex w-full bg-black md:w-fit h-full justify-center items-center md:block ${
+          className={`flex w-full md:w-fit h-full justify-center items-center md:block ${
             navbar ? " block" : "hidden"
           }`}
         >
@@ -71,15 +71,21 @@ function NavBar() {
                   <Link
                     href={item.src}
                     onClick={() => setNavbar(!navbar)}
-                    className={`inline-flex h-full w-full justify-center cursor-pointer md:px-6 py-4 md:py-2 ${
-                      pathName === item.src && " animate-bounce"
-                    } bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] rounded-md border border-slate-800 outline-none`}
+                    className={`inline-flex h-full w-full justify-center gap-2 items-center cursor-pointer md:px-4 py-4 md:py-2 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] rounded-md border border-slate-800 outline-none`}
                   >
                     {/* "inline-flex h-12 items-center justify-center rounded-md
                       border border-slate-800
                       bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)]
                       bg-[length:200%_100%] px-6 outline-none" */}
+
                     {item.name}
+                    <span
+                      className={` absolute h-[40px] ${
+                        pathName !== item.src && "hidden"
+                      } animate-bounce text-sm text-white font-bold`}
+                    >
+                      <ImPacman className=" animate-spin-slow " />
+                    </span>
                   </Link>
                 </li>
               );
