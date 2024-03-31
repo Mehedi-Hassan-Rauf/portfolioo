@@ -82,7 +82,7 @@ export const part2 = [
     icon: <SiCoursera />,
     link: "https://drive.google.com/file/d/1-DpgyNMDXnF2QgnFTxHOnIOvcAYN90RN/view?usp=drive_link",
     description:
-      "For connecting with professionals of similar fields, growing networks and sharing professional carrier activities Linkedin plays a great role. Here I have an well briefed profile highlighting my education, work experience, skills and accomplishments",
+      "A complete series of courses on front-end web development by meta engineers. This course gave me a brief learning about front-end web development and a good understanding of how the whole frontend works or should be working . It has given me the confidence to start my own projects",
   },
   {
     title: "Problem Solving",

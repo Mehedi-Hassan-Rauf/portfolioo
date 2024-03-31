@@ -1,6 +1,8 @@
 "use client";
 import { BaseSyntheticEvent, useState } from "react";
 import { Toaster, toast } from "sonner";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -38,41 +40,54 @@ const Contact = () => {
       message: "",
     });
   }
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      // once: true,
+    });
+  }, []);
   return (
     <div className="contact relative w-11/12 sm:w-9/12 pt-36 sm:pt-48 text-white flex flex-col gap-10">
       <Toaster position="top-right" />
-      <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <h1
+        data-aos="fade-up"
+        className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+      >
         Contact.
       </h1>
       <div className="inputs w-full md:w-2/3 flex flex-col gap-10">
-        <p className="">
+        <p data-aos="fade-left" className="">
           Get in touch or shoot me an email directly on raufnx@gmail.com
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col gap-10">
           <input
             type="text"
             name="Name"
+            data-aos="flip-up"
             value={data.name}
             onChange={(e) => setData({ ...data, name: e.target.value })}
-            className=" w-full bg-transparent rounded-md border border-slate-800 py-3 pl-7 placeholder:text-gray-400 outline-none"
+            className=" w-full bg-black rounded-md border border-slate-800 py-3 pl-7 placeholder:text-gray-400 outline-none"
             placeholder="Name"
           />
           <input
             type="Email"
             name="Email"
+            data-aos="flip-up"
             value={data.email}
             onChange={(e) => setData({ ...data, email: e.target.value })}
-            className=" w-full bg-transparent rounded-md border border-slate-800 py-3 pl-7 placeholder:text-gray-400 outline-none"
+            className=" w-full bg-black rounded-md border border-slate-800 py-3 pl-7 placeholder:text-gray-400 outline-none"
             placeholder="Email"
           />
           <textarea
             name="msg"
+            data-aos="flip-up"
             id=""
             rows={5}
             value={data.message}
             onChange={(e) => setData({ ...data, message: e.target.value })}
             placeholder="Message"
-            className=" w-full bg-transparent rounded-md border border-slate-800 py-3 pl-7 placeholder:text-gray-400 outline-none"
+            className=" w-full bg-black rounded-md border border-slate-800 py-3 pl-7 placeholder:text-gray-400 outline-none"
           ></textarea>
           <button
             type="submit"

@@ -1,15 +1,29 @@
+"use client";
 import { PiCertificateLight } from "react-icons/pi";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import Link from "next/link";
+import AOS from "aos";
 import { part1, part2, skills } from "@/utils/data";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      // once: true,
+    });
+  }, []);
+
   return (
     <div className="about relative w-11/12 sm:w-9/12 min-h-screen pt-36 sm:pt-48 text-white flex flex-col gap-20 ">
       {/* <Image src={mask} alt="mask" /> */}
       {/* stop */}
 
-      <h1 className="text-4xl md:text-7xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <h1
+        data-aos="fade-up"
+        className="text-4xl md:text-7xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+      >
         About Me.
       </h1>
 
@@ -18,6 +32,7 @@ const About = () => {
           return (
             <div
               key={index}
+              data-aos={`${index % 2 === 0 ? "fade-left" : "fade-right"}`}
               className="box ml-10 flex flex-col gap-4 relative before:absolute before:w-[22px] before:h-[22px] before:rounded-full before:bg-black before:-left-[3.2rem] before:top-0 before:border-2 before:border-white"
             >
               <div className="flex justify-between">
@@ -52,7 +67,10 @@ const About = () => {
           return (
             <div
               key={index}
-              className="skill text-xs sm:text-xl flex gap-1 justify-center items-center border border-white/[0.2] py-5"
+              data-aos={`${
+                index % 2 === 0 ? "fade-down-left" : "fade-down-right"
+              }`}
+              className="skill bg-black text-xs sm:text-xl flex gap-1 justify-center items-center border border-white/[0.2] py-5"
             >
               {item.icon}
               <h1 className="font-bold text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
@@ -74,6 +92,7 @@ const About = () => {
           return (
             <div
               key={index}
+              data-aos={`${index % 2 === 0 ? "fade-left" : "fade-right"}`}
               className="box ml-10 flex flex-col gap-4 relative before:absolute before:w-[22px] before:h-[22px] before:rounded-full before:bg-black before:-left-[3.2rem] before:top-0 before:border-2 before:border-white"
             >
               <div className="flex justify-between">

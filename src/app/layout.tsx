@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "aos/dist/aos.css";
 import NavBar from "@/components/NavBar";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
-import { GridBackgroundDemo } from "@/components/ui/grid-background";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

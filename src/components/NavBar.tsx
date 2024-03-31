@@ -6,6 +6,8 @@ import { IoCloseSharp } from "react-icons/io5";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import AOS from "aos";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -16,6 +18,13 @@ function NavBar() {
     { name: "Contact", src: "/contact" },
   ];
   const pathName = usePathname();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      // once: true,
+    });
+  }, []);
   return (
     <nav className="w-full bg-transparent fixed top-0 left-0 right-0 z-10">
       <div
@@ -27,9 +36,14 @@ function NavBar() {
           {/* LOGO */}
           <div className="flex items-center relative w-fit">
             <Link href="/">
-              <ImPacman className="text-3xl text-white font-bold flex" />
+              <ImPacman
+                data-aos="fade-left"
+                className="text-3xl text-white font-bold flex"
+              />
             </Link>
-            <span className="text-sm ml-[-8px]">10110</span>
+            <span data-aos="fade-right" className="text-sm ml-[-8px]">
+              10110
+            </span>
           </div>
           {/* HAMBURGER BUTTON FOR MOBILE */}
           <div className="md:hidden">
@@ -58,7 +72,7 @@ function NavBar() {
                     href={item.src}
                     onClick={() => setNavbar(!navbar)}
                     className={`inline-flex h-full w-full justify-center cursor-pointer md:px-6 py-4 md:py-2 ${
-                      pathName !== item.src && "animate-pulse"
+                      pathName === item.src && " animate-bounce"
                     } bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] rounded-md border border-slate-800 outline-none`}
                   >
                     {/* "inline-flex h-12 items-center justify-center rounded-md

@@ -5,6 +5,8 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FollowerPointerCard } from "./following-pointer";
+import AOS from "aos";
+import { useEffect } from "react";
 
 export const HoverEffect = ({
   items,
@@ -21,6 +23,13 @@ export const HoverEffect = ({
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      // once: true,
+    });
+  }, []);
 
   return (
     <div
@@ -54,7 +63,10 @@ export const HoverEffect = ({
           <Card>
             {item.source && (
               <CardTitle>
-                <h4 className={"text-zinc-100 font-bold tracking-wide mt-4"}>
+                <h4
+                  data-aos="fade-up"
+                  className={"text-zinc-100 font-bold tracking-wide mt-4"}
+                >
                   {item.title}
                 </h4>
                 <button className="inline-flex px-5 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  outline-none">
@@ -73,6 +85,7 @@ export const HoverEffect = ({
             >
               <Link href={item?.link} target="_blank" key={idx}>
                 <Image
+                  data-aos={`${idx % 2 === 0 ? "flip-left" : "flip-up"}`}
                   src={item.pic}
                   alt={item.title}
                   width={500}
@@ -85,6 +98,9 @@ export const HoverEffect = ({
                   {item.tags.map((tag, idx) => (
                     <div
                       key={idx}
+                      data-aos={`${
+                        idx % 2 === 0 ? "fade-down-left" : "fade-down-right"
+                      }`}
                       className="w-fit float-left mr-1 mb-2 rounded-md flex justify-center items-center border border-white/[0.2] px-2"
                     >
                       <h1 className="font-bold w-fit text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
