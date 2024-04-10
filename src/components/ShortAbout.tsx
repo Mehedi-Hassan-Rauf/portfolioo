@@ -13,7 +13,7 @@ const ShortAbout = () => {
     });
   }, []);
   return (
-    <div className="h-fit relative pt-24 sm:pt-32 w-11/12 sm:w-9/12 flex flex-col-reverse md:flex-row gap-10 overflow-hidden">
+    <div className="h-fit pt-24 sm:pt-32 w-11/12 sm:w-9/12 flex flex-col-reverse md:flex-row gap-10 overflow-hidden">
       {/* <Spotlight
         className="-top-40 left-0 md:left-60  md:-top-20"
         fill="white"

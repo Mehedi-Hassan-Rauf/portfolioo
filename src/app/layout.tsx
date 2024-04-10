@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-col gap-10 min-h-screen relative max-w-screen justify-center items-center dark:bg-black bg-black bg-grid-white/[0.12]`}
+        className={`${inter.className} flex flex-col gap-10 min-h-screen max-w-screen justify-center items-center dark:bg-black bg-black bg-grid-white/[0.2]`}
         suppressHydrationWarning={true}
       >
         {/* <div className="absolute pointer-events-none inset-0 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div> */}
