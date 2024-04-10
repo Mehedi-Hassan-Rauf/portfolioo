@@ -30,7 +30,7 @@ function NavBar() {
       <div
         className={`${
           navbar && "h-screen"
-        } md:h-fit flex gap-0 w-full backdrop-sepia-0 bg-black/80 sm:bg-black/50 flex-col md:flex-row items-center md:justify-between px-4 lg:max-w-7xl md:px-8`}
+        } md:h-fit flex gap-0 w-full backdrop-sepia-0 bg-black/80 sm:bg-black/30 flex-col md:flex-row items-center md:justify-between px-4 lg:max-w-7xl md:px-8`}
       >
         <div className="flex items-center w-full justify-between py-3 md:py-6 md:block">
           {/* LOGO */}
