@@ -20,10 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-col gap-10 min-h-screen max-w-screen justify-center items-center dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative`}
+        className={`${inter.className} flex flex-col gap-10 min-h-screen relative max-w-screen justify-center items-center dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2]`}
         suppressHydrationWarning={true}
       >
-        <div className="absolute pointer-events-none inset-0 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div>
+        {/* <div className="absolute pointer-events-none inset-0 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div> */}
+        <div className="absolute inset-0 w-screen pointer-events-none backdrop-sepia-0 bg-black/40"></div>
         <NavBar />
         <Cursor />
         {children}
