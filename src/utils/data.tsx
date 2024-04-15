@@ -56,21 +56,21 @@ export const part1 = [
   {
     title: "Github",
     icon: <SiGithub />,
-    link: "",
+    link: "https://github.com/Mehedi-Hassan-Rauf",
     description:
       "A developer platform that allows developers to create, store, manage and share their code.Storing and sharing code is awesome with github. Check out my github profile to see my contributions and some repositories.",
   },
   {
     title: "Leetcode",
     icon: <SiLeetcode />,
-    link: "",
+    link: "https://leetcode.com/Rauf_/",
     description:
       "Along with the importance of web development skills, problem solving skills are also necessary. Where LeetCode plays a vital role. I have solved problems using Data structures and algorithms that are widely used during technical interviews at companies like Facebook, Amazon, Hulu and Google",
   },
   {
     title: "Codeforces",
     icon: <SiCodeforces />,
-    link: "",
+    link: "https://codeforces.com/profile/raufnx",
     description:
       "I have also solved many problems and participated in contests in this platform. Theses problems are slightly different from the ones I have seen on LeetCode. But codeforces also helped me in improving some of my problem solving skills",
   },
