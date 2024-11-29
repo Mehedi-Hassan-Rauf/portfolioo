@@ -14,7 +14,7 @@ const Footer = () => {
           (pathName == "/" && "/about") ||
           (pathName == "/about" && "/projects") ||
           (pathName == "/projects" &&
-            "https://drive.google.com/file/d/1wkOE8Owq0ezO_jzyVqZ01S2eiuRhf7rG/view?usp=sharing") ||
+            "https://drive.google.com/file/d/1Jhjagx6vJZCw9peSlj0KHWWIhhVOl91C/view?usp=sharing") ||
           (pathName == "/contact" && "/")
         }`}
         target={`${pathName == "/projects" ? "_blank" : "_self"}`}
