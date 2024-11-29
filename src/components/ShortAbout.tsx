@@ -64,7 +64,7 @@ const ShortAbout = () => {
           <button className="inline-flex px-5 py-2 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  outline-none">
             <Link
               href={
-                "https://drive.google.com/file/d/1wkOE8Owq0ezO_jzyVqZ01S2eiuRhf7rG/view?usp=sharing"
+                "https://drive.google.com/file/d/1Jhjagx6vJZCw9peSlj0KHWWIhhVOl91C/view?usp=sharing"
               }
               target="_blank"
             >
